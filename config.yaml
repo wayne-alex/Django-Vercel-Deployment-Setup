@@ -1,0 +1,22 @@
+# Project configuration settings for deployment setup
+# Project name
+# If left blank, the script will automatically find the project name by searching for wsgi.py and settings.py
+project_name: ""
+
+# Set DEBUG to False
+# If set to True, the script will set the DEBUG setting to False in settings.py
+set_debug_false: true
+
+# Generate requirements.txt
+# If set to True, the script will generate the requirements.txt file by running 'pip freeze'
+generate_requirements: true
+
+# Configure static files
+# If set to True, the script will install whitenoise, configure settings.py for static files,
+# set the static files storage, add Whitenoise middleware, and run collectstatic
+configure_static_files: true
+
+# Database configuration
+# vercel doesn't support sqlite3, so it will automatically be removed to a more production-friendly DB
+# After the script runs configure your Db from .env that will be created if true
+configure_database: true
