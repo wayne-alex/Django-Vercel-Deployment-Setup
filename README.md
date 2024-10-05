@@ -33,12 +33,13 @@ The `config.yaml` file contains project configuration settings for the deploymen
 
 ### Running the Setup Script
 
-1. Ensure `config.yaml` is configured according to your needs.
-2. Run the setup script:
+1. Ensure setup.py,config.py and reverse.py are on the root Directory of your Django app.i.e Should be next to manage.py
+2. Ensure `config.yaml` is configured according to your needs.
+3. Run the setup script:
 
-    ```bash
-    python setup.py
-    ```
+       ```bash
+       python setup.py
+       ```
 
 This script will configure your Django project for deployment on Vercel according to the settings in `config.yaml`.
 

@@ -14,9 +14,14 @@ def load_config(config_file='config.yaml'):
 
 
 def find_django_project_name():
-    for root, dirs, files in os.walk('.'):
+    # Get the directory where the script is located
+    script_dir = os.path.dirname(os.path.abspath(__file__))
+
+    # Walk through the directory tree starting from the script's directory
+    for root, dirs, files in os.walk(script_dir):
         if 'wsgi.py' in files and 'settings.py' in files:
             return os.path.basename(root)
+
     return None
 
 
