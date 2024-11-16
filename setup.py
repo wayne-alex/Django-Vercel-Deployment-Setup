@@ -128,6 +128,8 @@ def add_load_dotenv_import(settings_path):
     with open(settings_path, 'r') as file:
         lines = file.readlines()
 
+    # Add package python-dotenv
+    os.system("pip install python-dotenv")
     # Check if 'from dotenv import load_dotenv' and 'load_dotenv()' are already present
     import_line_present = any('from dotenv import load_dotenv' in line for line in lines)
     load_dotenv_call_present = any('load_dotenv()' in line for line in lines)
